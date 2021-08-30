@@ -58,11 +58,9 @@ source("bym_models/bym_h1_inla.R")
 
 
 
-
 ##########################
 ##  BYM model - Type I  ##
 ##########################
-
 model <- bym.type1.h1
 
 
@@ -79,11 +77,9 @@ save(t.inla, result.inla, file = "bym_typeI_model_h1_inla.Rdata")
 
 
 
-
 #############################################
 ##  BYM model - Type II/Type III/Type IV   ##
 #############################################
-
 model <- bym.types.h1
 
 
@@ -117,7 +113,6 @@ result.inla <- inla(model, family="poisson", data=Data.INLA, E=E,
                                   control.predictor=list(compute=TRUE, cdf=c(log(1))),
                                   control.compute=list(dic=TRUE, cpo=TRUE, waic=TRUE),
                                   control.inla=list(strategy="laplace"))
-
 
 # Save results
 save(result.inla, file = "bym_typeIV_model_h1_inla.Rdata")   # Type IV
