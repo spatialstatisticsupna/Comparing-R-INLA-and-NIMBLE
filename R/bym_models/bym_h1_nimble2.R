@@ -5,10 +5,9 @@
 
 
 
-
-#############################
-##  BYM - RW1 - Type I     ##
-#############################
+##########################
+##  BYM - RW1 - Type I  ##
+##########################
 bym.type1.h1 <- nimbleCode({
   # Priors
   alpha0 ~ dflat()
@@ -64,7 +63,7 @@ bym.type1.h1 <- nimbleCode({
   for(i in 1:N){ 
     for (k in 1:t){
       stType1.centered[i,k] <- stType1[i, k] - stType1.mean
-    }}
+  }}
   
   # Temporal trend
   for(k in 1:t){
@@ -78,9 +77,9 @@ bym.type1.h1 <- nimbleCode({
 
 
 
-#############################
-##  BYM - RW1 - Type II    ##
-#############################
+###########################
+##  BYM - RW1 - Type II  ##
+###########################
 bym.type2.h1 <- nimbleCode({
   # Priors
   alpha0 ~ dflat()
