@@ -12,7 +12,6 @@ setwd("")
 
 
 
-
 #################################
 ##  Load and prepare the data  ##
 #################################
@@ -53,7 +52,6 @@ for(i in t:t) {
 }
 
 
-
 # Counts and expected cases in matrix form
 expected <-  matrix(Data$Expected, nrow = 50)
 y <- matrix(Data$Counts, nrow = 50)
@@ -72,7 +70,6 @@ source("bym_models/bym_h1_nimble2.R")   # Nimble 2
 
 
 
-
 ##################################
 ##  n.chains, n.iter, n.burnin  ##
 ##################################
@@ -85,13 +82,10 @@ num.thin <- 75
 
 
 
-
 ###########################
 ##  BYM model - Type I   ##
 ###########################
-
 code <- bym.type1.h1
-
 
 
 ## 1. Define data ##
@@ -112,8 +106,6 @@ constants <- list(N = N, t = t, E = expected,
                   temp.zero = 0)
 
 
-
- 
 ## 3. Define initial values ##
 
 # Nimble 1
@@ -146,12 +138,10 @@ MCMC <- buildMCMC(conf, enableWAIC = TRUE)
 cMCMC <- compileNimble(MCMC, project=cmodel, resetFunctions = TRUE)
 
 
-
 ## 5. Obtain the samples ##
 result.nimble <- runMCMC(cMCMC, niter = num.iter, nburnin = num.burnin, 
                          nchains = num.chains, thin = num.thin, 
                          samplesAsCodaMCMC = TRUE, summary=TRUE, WAIC = TRUE)
-
 
 ## 6. Save results ##
 save(result.nimble, file = "bym_typeI_model_h1_nimble1.Rdata")   # Nimble 1
@@ -163,7 +153,6 @@ save(result.nimble, file = "bym_typeI_model_h1_nimble1.Rdata")   # Nimble 1
 ############################
 ##  BYM model - Type II   ##
 ############################
-
 code <- bym.type2.h1
 
 
@@ -187,8 +176,6 @@ constants <- list(N = N, t = t, E = expected,
                   adj = adj, num = num, weights = weights, L = length(adj),
                   adj.t2 = adj.rw1, num.t2 = num.rw1, weights.t2 = weights.rw1,
                   L.t2 = length(adj.rw1), temp.zero = 0)
-
-
 
 
 ## 3. Define initial values ##
@@ -222,12 +209,10 @@ MCMC <- buildMCMC(conf, enableWAIC = TRUE)
 cMCMC <- compileNimble(MCMC, project=cmodel, resetFunctions = TRUE)
 
 
-
 ## 5. Obtain the samples ##
 result.nimble <- runMCMC(cMCMC, niter = num.iter, nburnin = num.burnin, 
                          nchains = num.chains, thin = num.thin, 
                          samplesAsCodaMCMC = TRUE, summary=TRUE, WAIC = TRUE)
-
 
 ### 6. Save results ###
 save(result.nimble, file = "bym_typeII_model_h1_nimble1.Rdata")
@@ -239,7 +224,6 @@ save(result.nimble, file = "bym_typeII_model_h1_nimble1.Rdata")
 #############################
 ##  BYM model - Type III   ##
 #############################
-
 code <- bym.type3.h1
 
 
@@ -315,9 +299,7 @@ save(result.nimble, file = "bym_typeIII_model_h1_nimble1.Rdata")
 ############################
 ##  BYM model - Type IV   ##
 ############################
-
 code <- bym.type4.h1
-
 
 
 ## 0. Temporal structure matrix for a RW1 prior ###
@@ -328,11 +310,8 @@ cov.Rt <- MASS::ginv(Rt)    # Generalized Inverse of Rt
 chol.cov.Rt <- chol(cov.Rt)
 
 
-
-
 ## 1. Define data ##
 data <- list(y = y)
-
 
 
 ## 2. Define constants ##
@@ -365,7 +344,6 @@ inits <- list(alpha0 = rnorm(1,0,0.1), sd.u = runif(1,0,1), sd.v = runif(1,0,1),
 
 
 
-
 ## 4. Run the model ##
 model <- nimbleModel(code, constants = constants, data = data, inits = inits)
 
@@ -381,12 +359,10 @@ conf <- configureMCMC(model, monitors = c('alpha0', 'sd.u', 'sd.v', 'sd.temp', '
 MCMC <- buildMCMC(conf, enableWAIC = TRUE)
 cMCMC <- compileNimble(MCMC, project=cmodel, resetFunctions = TRUE)
 
-
 ## 5. Obtain the samples ##
 result.nimble <- runMCMC(cMCMC, niter = num.iter, nburnin = num.burnin, 
                          nchains = num.chains, thin = num.thin, 
                          samplesAsCodaMCMC = TRUE, summary=TRUE, WAIC = TRUE)
-
 
 ## 6. Save results ##
 save(result.nimble, file = "bym_typeIV_model_h1_nimble1.Rdata")
