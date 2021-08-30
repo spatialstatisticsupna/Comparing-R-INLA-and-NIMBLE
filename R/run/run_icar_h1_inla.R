@@ -12,7 +12,6 @@ setwd("")
 
 
 
-
 #################################
 ##  Load and prepare the data  ##
 #################################
@@ -61,9 +60,7 @@ source("icar_models/icar_h1_inla.R")
 ############################
 ##  ICAR model - Type I   ##
 ############################
-
 model <- icar.type1.h1
-
 
 # Run the model
 result.inla <- inla(model, family="poisson", data=Data.INLA, E=E,
@@ -71,10 +68,8 @@ result.inla <- inla(model, family="poisson", data=Data.INLA, E=E,
                     control.compute=list(dic=TRUE, cpo=TRUE, waic=TRUE),
                     control.inla=list(strategy="laplace"))
 
-
 # Save results
 save(result.inla, file = "icar_typeI_model_h1_inla.Rdata")
-
 
 
 
@@ -82,7 +77,6 @@ save(result.inla, file = "icar_typeI_model_h1_inla.Rdata")
 ##############################################
 ##  ICAR model - Type II/Type III/Type IV   ##
 ##############################################
-
 model <- icar.types.h1
 
 
@@ -117,7 +111,6 @@ result.inla <- inla(model, family="poisson", data=Data.INLA, E=E,
                     control.predictor=list(compute=TRUE, cdf=c(log(1))),
                     control.compute=list(dic=TRUE, cpo=TRUE, waic=TRUE),
                     control.inla=list(strategy="laplace")))
-
 
 # Save results
 save(t.inla, result.inla, file = "icar_typeIV_model_h1_inla.Rdata")   # Type IV
