@@ -11,9 +11,9 @@ bym.type1.h1 <- O ~ 1 + f(ID.area, model="bym", graph=Rs, scale.model=FALSE,
                           constr=TRUE, hyper=list(prec.unstruct=list(prior=sdunif),
                           prec.spatial=list(prior=sdunif))) + 
                          f(ID.year, model="rw1", constr=TRUE, 
-                            hyper=list(prec=list(prior=sdunif))) +
+                           hyper=list(prec=list(prior=sdunif))) +
                          f(ID.area.year, model="iid", constr=TRUE, 
-                            hyper=list(prec=list(prior=sdunif)))
+                           hyper=list(prec=list(prior=sdunif)))
 
 
 
