@@ -9,7 +9,6 @@ setwd("")
 
 
 
-
 #################################
 ##  Load and prepare the data  ##
 #################################
@@ -50,11 +49,9 @@ for(i in t:t) {
 }
 
 
-
 # Counts and expected cases in matrix form
 expected <-  matrix(Data$Expected, nrow = 50)
 y <- matrix(Data$Counts, nrow = 50)
-
 
 
 
@@ -85,7 +82,6 @@ constants <- list(N = N, t = t, E = expected, L = length(adj), L.rw1 = length(ad
                   Achol = chol.cov.Rt, nt= N*t)
 
 
-
 ## 3. Define initial values ##
 
 # Nimble 1
@@ -93,7 +89,6 @@ inits <- list(alpha0 = rnorm(1,0,0.1), sd.u = runif(1,0,1),
               sd.temp = runif(1,0,1), sd.t4 = runif(1,0,1),
               spat.u = rnorm(N), temp = rnorm(t),
               stType4 = matrix(rnorm(N*t), nrow=N, ncol=t))
-
 
 
 ## 4. Variables to retrive ##
@@ -146,16 +141,7 @@ result.chains <- parLapply(cl = parallelize, X = 1:3,
 
 stopCluster(parallelize)
 
-
 save(result.chains, file = "icar_type4_model_h1_nimble1.Rdata")
-
-
-
-
-
-
-
-
 
 
 
