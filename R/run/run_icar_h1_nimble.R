@@ -12,7 +12,6 @@ setwd("")
 
 
 
-
 #################################
 ##  Load and prepare the data  ##
 #################################
@@ -53,7 +52,6 @@ for(i in t:t) {
 }
 
 
-
 # Counts and expected cases in matrix form
 expected <-  matrix(Data$Expected, nrow = 50)
 y <- matrix(Data$Counts, nrow = 50)
@@ -86,9 +84,7 @@ num.thin <- 75
 ############################
 ##  ICAR model - Type I   ##
 ############################
-
 code <- icar.type1.h1
-
 
 
 ## 1. Define data ##
@@ -109,7 +105,6 @@ constants <- list(N = N, t = t, E = expected,
                   temp.zero = 0)
 
 
-
 ## 3. Define initial values ##
 
 # Nimble 1
@@ -125,7 +120,6 @@ inits <- list(alpha0 = rnorm(1,0,0.1), sd.u = runif(1,0,1),
               stType1 = matrix(rnorm(N*t), nrow=N, ncol=t))
 
 
-
 ## 4. Run the model ##
 model <- nimbleModel(code, constants = constants, data = data, inits = inits)
 cmodel <- compileNimble(model)
@@ -137,7 +131,6 @@ conf <- configureMCMC(model, monitors = c('alpha0', 'sd.u', 'sd.temp', 'sd.t1',
                                           'Etemp', 'Espat', 'Est', 'RR',
                                           'Dev', 'sumDev', 'lambda'))
 
-
 MCMC <- buildMCMC(conf, enableWAIC = TRUE)
 cMCMC <- compileNimble(MCMC, project=cmodel, resetFunctions = TRUE)
 
@@ -146,7 +139,6 @@ cMCMC <- compileNimble(MCMC, project=cmodel, resetFunctions = TRUE)
 result.nimble <- runMCMC(cMCMC, niter = num.iter, nburnin = num.burnin, 
                          nchains = num.chains, thin = num.thin, 
                          samplesAsCodaMCMC = TRUE, summary=TRUE, WAIC = TRUE)
-
 
 ## 6. Save results ##
 save(result.nimble, file = "icar_typeI_model_h1_nimble1.Rdata")   # Nimble 1
@@ -157,9 +149,7 @@ save(result.nimble, file = "icar_typeI_model_h1_nimble1.Rdata")   # Nimble 1
 #############################
 ##  ICAR model - Type II   ##
 #############################
-
 code <- icar.type2.h1
-
 
 
 ## 1. Define data ##
@@ -181,7 +171,6 @@ constants <- list(N = N, t = t, E = expected,
                   adj = adj, num = num, weights = weights, L = length(adj),
                   adj.t2 = adj.rw1, num.t2 = num.rw1, weights.t2 = weights.rw1,
                   L.t2 = length(adj.rw1), temp.zero = 0)
-
 
 
 ## 3. Define initial values ##
@@ -220,7 +209,6 @@ result.nimble <- runMCMC(cMCMC, niter = num.iter, nburnin = num.burnin,
                          nchains = num.chains, thin = num.thin, 
                          samplesAsCodaMCMC = TRUE, summary=TRUE, WAIC = TRUE)
 
-
 ## 6. Save results ##
 save(result.nimble, file = "icar_typeII_model_h1_nimble1.Rdata")   # Nimble 1
 
@@ -230,7 +218,6 @@ save(result.nimble, file = "icar_typeII_model_h1_nimble1.Rdata")   # Nimble 1
 ##############################
 ##  ICAR model - Type III   ##
 ##############################
-
 code <- icar.type3.h1
 
 
@@ -269,7 +256,6 @@ inits <- list(alpha0 = rnorm(1,0,0.1), sd.u = runif(1,0,1),
               stType3 = matrix(rnorm(N*t), nrow=N, ncol=t))
 
 
-
 ## 4. Run the model ##
 model <- nimbleModel(code, constants = constants, data = data, inits = inits)
 cmodel <- compileNimble(model)
@@ -290,7 +276,6 @@ result.nimble <- runMCMC(cMCMC, niter = num.iter, nburnin = num.burnin,
                          nchains = num.chains, thin = num.thin, 
                          samplesAsCodaMCMC = TRUE, summary=TRUE, WAIC = TRUE)
  
-
 ## 6. Save results ##
 save(result.nimble, file = "icar_typeIII_model_h1_nimble1.Rdata")   # Nimble 1
 
@@ -300,7 +285,6 @@ save(result.nimble, file = "icar_typeIII_model_h1_nimble1.Rdata")   # Nimble 1
 #############################
 ##  ICAR model - Type IV   ##
 #############################
-
 code <- icar.type4.h1
 
 
@@ -329,7 +313,6 @@ constants <- list(N = N, t = t, E = expected, L = length(adj), L.rw1 = length(ad
 constants <- list(N = N, t = t, E = expected, L = length(adj),
                   adj = adj, num = num, weights = weights,
                   Achol = chol.cov.Rt, nt= N*t, temp.zero = 0)
-
 
 
 ## 3. Define initial values ##
@@ -363,12 +346,10 @@ MCMC <- buildMCMC(conf, enableWAIC = TRUE)
 cMCMC <- compileNimble(MCMC, project=cmodel, resetFunctions = TRUE)
 
 
-
 ## 5. Obtain the samples ##
 result.nimble <- runMCMC(cMCMC, niter = num.iter, nburnin = num.burnin, 
                          nchains = num.chains, thin = num.thin, 
                          samplesAsCodaMCMC = TRUE, summary=TRUE, WAIC = TRUE)
-
 
 ## 6. Save results ##
 save(result.nimble, file = "icar_typeIV_model_h1_nimble1.Rdata")   # Nimble 1
