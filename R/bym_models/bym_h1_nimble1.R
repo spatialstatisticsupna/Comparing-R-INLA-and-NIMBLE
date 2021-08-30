@@ -48,7 +48,6 @@ bym.type1.h1 <- nimbleCode({
       
       # Deviance
       Dev[i,k] <- -2*(-lambda[i,k] + y[i,k]*log(lambda[i,k])-lfactorial(y[i,k]))
-
     }
     # Spatial pattern
     Espat[i] <- exp(sd.u*spat.u[i] + sd.v*spat.v[i])
@@ -201,7 +200,6 @@ bym.type3.h1 <- nimbleCode({
   # Posterior mean deviance
   sumDev <- sum(Dev[1:N, 1:t])
 })
-
 
 
 
