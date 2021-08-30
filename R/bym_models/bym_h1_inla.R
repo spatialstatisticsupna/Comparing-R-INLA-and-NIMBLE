@@ -4,8 +4,6 @@
 # --------------                H1 hyperpriors                 -------------- #
 
 
-
-
 ##########################
 ##  BYM - RW1 - Type I  ##
 ##########################
@@ -16,7 +14,6 @@ bym.type1.h1 <- O ~ 1 + f(ID.area, model="bym", graph=Rs, scale.model=FALSE,
                             hyper=list(prec=list(prior=sdunif))) +
                          f(ID.area.year, model="iid", constr=TRUE, 
                             hyper=list(prec=list(prior=sdunif)))
-
 
 
 
