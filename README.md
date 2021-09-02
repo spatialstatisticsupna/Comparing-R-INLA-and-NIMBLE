@@ -9,7 +9,7 @@ This repository contains the R code to fit the models described in the paper ent
 
 
 ## Data
-[BreastCancer_data.Rdata](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R/BreastCancer_data.Rdata) containts breast cancer data in Spain during 1990-2010 used in this paper. 
+[BreastCancer_data.Rdata](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R/BreastCancer_data.Rdata) contains breast cancer data in Spain during 1990-2010 used in this paper. 
 This .Rdata file constains the following:
 
 **Data:** a dataframe with the following variables
