@@ -7,21 +7,16 @@ This repository contains the R code to fit the models described in the paper ent
 [References](##References)
 
 
+# Data
+Female breast cancer mortality data (ICD-10 code 50) in Spanish provinces during the period 1990-2010.
 
-## Data
-[BreastCancer_data.Rdata](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R/BreastCancer_data.Rdata) contains breast cancer data in Spain during 1990-2010 used in this paper. 
-This .Rdata file constains the following:
-
-**Data:** a dataframe with the following variables
- - *Area*: provinces of Spain which are enumerated from 1 to 50
- - *Year*: year (from 1990 to 2010)
- - *Counts*: number of deaths of each province of Spain in each year due to breast cancer
- - *Expected*: expected cases of each province of Spain in each year
-
-**Carto_ESP:** contains the cartography of each province of Spain
-
-**Rs:** adjacency matrix
-
+- [**BreastCancer_data.Rdata**](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R/BreastCancer_data.Rdata)
+  
+  This .Rdata contains the following objects
+  - **_Data_**: `data.frame` object with the number of observed and expected cases (_'Counts'_ and _'Expected'_ variables, respectively) for each province (_'Area'_) and time period (_'Year'_) for female breast cancer mortality data.
+  - **_Carto_ESP_**: `sf` object containing the spatial polygons of the Spanish provinces. The data contains a `data.frame` with 50 rows and  _'Area'_ (character vector of geographic identifiers), _'Name'_ (character vector of province names), _'Longitude'_ (numeric vector of longitude values), _'Latitude'_ (numeric vector of latitude values) and _'geometry'_ (sfc_MULTIPOLYGON) variables.
+  - **_Rs_**: adjacency matrix.
+	
 
 ## R code
 R code to fit the spatio-temporal models described in the paper has been included [here](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R).
