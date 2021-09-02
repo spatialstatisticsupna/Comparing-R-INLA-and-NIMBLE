@@ -3,6 +3,9 @@ This repository contains the R code to fit the models described in the paper ent
 
 ## Table of contents
 [Data](##Data)  
+[R code](##R code)
+[References](##References)
+
 
 
 ## Data
@@ -29,3 +32,5 @@ Only models for the set of hyperprior distributions H1 are shown (to fit the mod
 
 ## Acknowledgements
 This work has been supported by Project PID2020-113125RB-I00 (AEI).
+
+## References
