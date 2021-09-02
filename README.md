@@ -2,7 +2,7 @@
 This repository contains the R code to fit the models described in the paper entitled *"Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners"*.
 
 ## Table of contents
-[Data](## Data)  
+[Data](##Data)  
 
 
 ## Data
