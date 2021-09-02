@@ -3,7 +3,7 @@ This repository contains the R code to fit the models described in the paper ent
 
 ## Table of contents
 [Data](##Data)  
-[R code](##R-code)
+[R code](##R-code)<br/>
 [References](##References)
 
 
