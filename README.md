@@ -1,5 +1,5 @@
-# Comparing_R-INLA_and_NIMBLE
-This repository contains the R code to fit the models described in the paper entitled "".
+# Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners
+This repository contains the R code to fit the models described in the paper entitled *"Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners"*.
 
 ## R code
 R code to fit the spatio-temporal models described in the paper has been included [here](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R).
