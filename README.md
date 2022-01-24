@@ -29,4 +29,4 @@ Only models for the set of hyperprior distributions H1 are shown (to fit the mod
 This work has been supported by Project PID2020-113125RB-I00 (AEI).
 
 ## References
-Urdangarin, A., Goicoa, T., and Ugarte, M.D. (2021). Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners. Submitted to _Statistical Methods in Medical Research_ in 2021.
+	Urdangarin, A., Goicoa, T., and Ugarte, M.D. (2021). Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners. Submitted to _Statistical Methods in Medical Research_ accepted, January 2022.
