@@ -26,7 +26,8 @@ Only models for the set of hyperprior distributions H1 are shown (to fit the mod
 - [tables_figures_paper.R](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R/tables_figures_paper.R) contains the necessary functions to reproduce all the figures and tables of Spanish breast cancer mortality data analysis.
 
 ## Acknowledgements
-This work has been supported by Project PID2020-113125RB-I00 (AEI).
-
+This work has been supported by Project PID2020-113125RB-I00/ MCIN/ AEI/ 10.13039/501100011033.
+ 
+ 
 ## References
 	Urdangarin, A., Goicoa, T., and Ugarte, M.D. (2021). Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners. Submitted to _Statistical Methods in Medical Research_ accepted, January 2022.
