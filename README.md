@@ -30,6 +30,6 @@ This work has been supported by Project PID2020-113125RB-I00/ MCIN/ AEI/ 10.1303
  
  
 ## References
-	[Urdangarin, A., Goicoa, T., and Ugarte, M.D. (2022). Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners. Submitted to _Statistical Methods in Medical Research_, in press.]  (https://doi.org/10.1177/10.1177/096228022210793519 .
+	[Urdangarin, A., Goicoa, T., and Ugarte, M.D. (2022). Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners. Submitted to __Statistical Methods in Medical Research__, in press.]  (https://doi.org/10.1177/10.1177/096228022210793519).
 	
 	 
