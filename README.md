@@ -25,7 +25,7 @@ Only models for the set of hyperprior distributions H1 are shown (to fit the mod
 - [run](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R/run) folder contains the Rscripts to run these models.
 - [tables_figures_paper.R](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R/tables_figures_paper.R) contains the necessary functions to reproduce all the figures and tables of Spanish breast cancer mortality data analysis.
 
-Computations were run using R-4.0.3, INLA (version 21.02.23, dated 2021-02-22) and NIMBLE (version 0.11.1, dated 2021-05-23).
+Computations were run using R-4.0.3, INLA version 21.02.23 and NIMBLE version 0.11.1.
 
 # Acknowledgements
 This work has been supported by Project PID2020-113125RB-I00/ MCIN/ AEI/ 10.13039/501100011033.
