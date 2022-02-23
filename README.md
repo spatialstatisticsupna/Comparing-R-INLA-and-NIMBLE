@@ -1,10 +1,12 @@
 # Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners
-This repository contains the R code to fit the models described in the paper entitled *"Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners"*.
+This repository contains the R code to fit the models described in the paper entitled _"Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners"_ [(Urdangarin et al., 2022)](https://journals.sagepub.com/doi/10.1177/09622802221079351)
+
 
 ## Table of contents
-[Data](##Data)  
-[R code](##R-code)<br/>
-[References](##References)
+
+- [Data](#Data)
+- [R code](#R-code)
+- [References](#References)
 
 
 # Data
@@ -18,7 +20,7 @@ Female breast cancer mortality data (ICD-10 code 50) in Spanish provinces during
   - **_Rs_**: adjacency matrix.
 	
 
-## R code
+# R code
 R code to fit the spatio-temporal models described in the paper has been included [here](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R).
 Only models for the set of hyperprior distributions H1 are shown (to fit the models with H2 and H3 hyperprior distributions slight modifications are required in the code). 
 - [icar_models](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R/icar_models) and [bym_models](https://github.com/ArantxaUrdangarin/Comparing-R-INLA-and-NIMBLE/blob/main/R/bym_models) folders contain the Rscripts with the spatio-temporal models fitted with ICAR and BYM spatial priors using R-INLA, Nimble 1 and Nimble 2. 
@@ -33,5 +35,5 @@ This work has been supported by Project PID2020-113125RB-I00/ MCIN/ AEI/ 10.1303
 ![image](https://github.com/spatialstatisticsupna/Comparing-R-INLA-and-NIMBLE/blob/main/micin-aei.jpg)
  
 # References
-[Urdangarin, A., Goicoa, T. and Ugarte, M.D. (2022). Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners. _Statistical Methods in Medical Research_, __in press__],doi: 10.1177/096228022210793519.
+[Urdangarin, A., Goicoa, T. and Ugarte, M.D. (2022). Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners. _Statistical Methods in Medical Research (online first)_. DOI: 10.1177/09622802221079351](https://journals.sagepub.com/doi/10.1177/09622802221079351)
 	 
