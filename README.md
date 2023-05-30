@@ -35,5 +35,5 @@ This work has been supported by Project PID2020-113125RB-I00/ MCIN/ AEI/ 10.1303
 ![image](https://github.com/spatialstatisticsupna/Comparing-R-INLA-and-NIMBLE/blob/main/micin-aei.jpg)
  
 # References
-[Urdangarin, A., Goicoa, T. and Ugarte, M.D. (2022). Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners. _Statistical Methods in Medical Research vol 31 (6), pp 1085-1103.DOI: 10.1177/09622802221079351](https://journals.sagepub.com/doi/10.1177/09622802221079351)
+[Urdangarin, A., Goicoa, T. and Ugarte, M.D. (2022). Space-time interactions in Bayesian disease mapping with recent tools: making things easier for practitioners. _Statistical Methods in Medical Research, vol 31 (6), pp 1085-1103.DOI: 10.1177/09622802221079351](https://journals.sagepub.com/doi/10.1177/09622802221079351)
 	 
